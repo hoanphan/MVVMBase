@@ -32,5 +32,5 @@ target 'BaseMVVM' do
   pod 'IQKeyboardManagerSwift', '=6.4.0'
 
  #Debug
- pod 'FLEX', '4.1.1', :configurations => ['Debug']
+ pod 'FLEX', :git => 'https://github.com/FLEXTool/FLEX', :configurations => ['Debug']
 end
