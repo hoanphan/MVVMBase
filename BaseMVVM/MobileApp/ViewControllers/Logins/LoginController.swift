@@ -23,18 +23,18 @@ class LoginController: BaseViewController {
 
     // demo
     override func localizable() {
-        self.passwordCommonTextField.placeholder = L10n.tr("login.password")
-        self.emailComonTextField.placeholder = L10n.tr("login.email")
+        self.passwordCommonTextField.getCommonTextField().placeholder = L10n.tr("login.password")
+        self.emailComonTextField.getCommonTextField().placeholder = L10n.tr("login.email")
         btnLogin.setTitle(L10n.tr("login.login"), for: .normal)
     }
 
     override func setupView() {
-        self.emailComonTextField.then {
+        self.emailComonTextField.getCommonTextField().then {
             $0.keyboardType = .emailAddress
             $0.icon = R.image.account()
         }
 
-        self.passwordCommonTextField.then {
+        self.passwordCommonTextField.getCommonTextField().then {
             $0.keyboardType = .default
             $0.isSecurityField = true
             $0.icon = R.image.icon_password()
@@ -54,19 +54,23 @@ class LoginController: BaseViewController {
                 }).disposed(by: disposeBag)
 
             sink.validationEmail
+                .delay(.milliseconds(200))
                 .asObservable()
-                .subscribe(onNext: {[weak self] (isValid, _) in
+                .subscribe(onNext: {[weak self] (isValid, message) in
                     if isValid == false {
-                        self?.emailComonTextField.state = .error
+                        self?.emailComonTextField.setStateTextField(state: .error(message))
                     }
+                    self?.view.layoutIfNeeded()
                 }).disposed(by: disposeBag)
 
             sink.validationPassword
+                .delay(.milliseconds(200))
                 .asObservable()
-                .subscribe(onNext: {[weak self] (isValid, _) in
+                .subscribe(onNext: {[weak self] (isValid, message) in
                     if isValid == false {
-                        self?.passwordCommonTextField.state = .error
+                        self?.passwordCommonTextField.setStateTextField(state: .error(message))
                     }
+                     self?.view.layoutIfNeeded()
                 }).disposed(by: disposeBag)
 
             self.btnLogin.rx.tap
@@ -78,6 +82,6 @@ class LoginController: BaseViewController {
     }
 
     @IBOutlet weak var btnLogin: UIButton!
-    @IBOutlet weak var emailComonTextField: CommonTextField!
-    @IBOutlet weak var passwordCommonTextField: CommonTextField!
+    @IBOutlet weak var emailComonTextField: CommonTextFieldError!
+    @IBOutlet weak var passwordCommonTextField: CommonTextFieldError!
 }

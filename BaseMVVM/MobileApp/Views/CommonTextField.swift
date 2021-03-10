@@ -8,16 +8,16 @@
 import UIKit
 import SnapKit
 
-enum StateCommonTextField {
-    case normal
-    case active
-    case error
+protocol CommonTextFieldDelegate {
+    func changeState(state: CommonTextField.State)
 }
 
 @IBDesignable
 class CommonTextField: UIView {
     // MARK: variable
     fileprivate var isShowPassword:Bool = false
+    public var delegate: CommonTextFieldDelegate?
+    
     // MARK: UI controller
     fileprivate var iconLeft:UIImageView?
     fileprivate var iconRight:UIImageView?
@@ -25,7 +25,7 @@ class CommonTextField: UIView {
     fileprivate var normalRadiusColor: CGColor = R.color.borderInput()?.cgColor ?? UIColor.white.cgColor
     fileprivate var activeRadiusColor: CGColor = R.color.activeBorderInput()?.cgColor ?? UIColor.blue.cgColor
     fileprivate var errorRadiusColor: CGColor = R.color.errorBorderInput()?.cgColor ?? UIColor.red.cgColor
-
+    
     @IBInspectable
     public var text: String? {
         set {
@@ -63,12 +63,12 @@ class CommonTextField: UIView {
         }
     }
 
-    var state: StateCommonTextField = .normal {
+    var state: State = .normal {
         didSet {
             self.setupBorderTextField()
         }
     }
-
+    
     @IBInspectable
     var icon: UIImage? = UIImage(named: "account") {
         didSet {
@@ -113,13 +113,10 @@ class CommonTextField: UIView {
         switch self.state {
         case .normal:
             layer.borderColor = self.normalRadiusColor
-            break
         case .active:
             layer.borderColor = self.activeRadiusColor
-            break
         default:
             layer.borderColor = self.errorRadiusColor
-            break
         }
     }
 
@@ -193,14 +190,22 @@ class CommonTextField: UIView {
             makes.trailing.equalTo(-10)
         })
     }
+    
+    enum State{
+        case normal
+        case active
+        case error(_ message: String)
+    }
 }
 
 extension CommonTextField: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.state = .active
+        self.delegate?.changeState(state: .active)
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.state = .normal
+        self.delegate?.changeState(state: .normal)
     }
 }

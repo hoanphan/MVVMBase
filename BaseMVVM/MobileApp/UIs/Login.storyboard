@@ -28,28 +28,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8pA-cX-AfN" customClass="CommonTextField" customModule="BaseMVVM" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8pA-cX-AfN" customClass="CommonTextFieldError" customModule="BaseMVVM" customModuleProvider="target">
                                 <rect key="frame" x="15" y="179" width="384" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="VDJ-yz-7vw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="VDJ-yz-7vw"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulM-km-vEj">
-                                <rect key="frame" x="10" y="234" width="74" height="20.5"/>
+                                <rect key="frame" x="10" y="224" width="74" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCR-mh-Jsn" customClass="CommonTextField" customModule="BaseMVVM" customModuleProvider="target">
-                                <rect key="frame" x="15" y="259.5" width="384" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCR-mh-Jsn" customClass="CommonTextFieldError" customModule="BaseMVVM" customModuleProvider="target">
+                                <rect key="frame" x="15" y="249.5" width="384" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="lFX-Yy-2EQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="lFX-Yy-2EQ"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0P-hL-D85" customClass="PrimaryButton" customModule="BaseMVVM" customModuleProvider="target">
-                                <rect key="frame" x="15" y="314.5" width="384" height="40"/>
+                                <rect key="frame" x="15" y="304.5" width="384" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="whV-5Y-b5l"/>
                                 </constraints>
@@ -60,7 +60,7 @@
                         <constraints>
                             <constraint firstItem="BIE-R8-8Ih" firstAttribute="centerX" secondItem="vFx-pm-BRK" secondAttribute="centerX" id="6ew-BE-QLX"/>
                             <constraint firstItem="q0P-hL-D85" firstAttribute="leading" secondItem="CCR-mh-Jsn" secondAttribute="leading" id="88W-At-r1h"/>
-                            <constraint firstItem="ulM-km-vEj" firstAttribute="top" secondItem="8pA-cX-AfN" secondAttribute="bottom" constant="15" id="FQY-An-dXS"/>
+                            <constraint firstItem="ulM-km-vEj" firstAttribute="top" secondItem="8pA-cX-AfN" secondAttribute="bottom" constant="5" id="FQY-An-dXS"/>
                             <constraint firstItem="q0P-hL-D85" firstAttribute="top" secondItem="CCR-mh-Jsn" secondAttribute="bottom" constant="15" id="Jwz-bA-6hB"/>
                             <constraint firstItem="vFx-pm-BRK" firstAttribute="trailing" secondItem="8pA-cX-AfN" secondAttribute="trailing" constant="15" id="KWz-Hx-HBV"/>
                             <constraint firstItem="CCR-mh-Jsn" firstAttribute="leading" secondItem="8pA-cX-AfN" secondAttribute="leading" id="PiQ-VB-hhr"/>
