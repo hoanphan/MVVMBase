@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HyundaiSansVNHeadOffice-Bold.ttf">
+            <string>HyundaiSansVnHeadOffice-Bold</string>
+        </array>
+        <array key="HyundaiSansVNHeadOffice-Regular.ttf">
+            <string>HyundaiSansVnHeadOffice-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BaseMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-199" y="86"/>
+        </scene>
+        <!--Common Alert View-->
+        <scene sceneID="OY8-i4-hhk">
+            <objects>
+                <viewController storyboardIdentifier="CommonAlertView" id="mkV-mm-kn0" customClass="CommonAlertView" customModule="Hyundai_Me_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k0m-xp-z49"/>
+                        <viewControllerLayoutGuide type="bottom" id="LlH-AB-q6N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iUB-wV-NAi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kA-jZ-cQK">
+                                <rect key="frame" x="12" y="373" width="390" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Y0-OY-PgS">
+                                        <rect key="frame" x="16" y="8" width="358" height="68"/>
+                                        <fontDescription key="fontDescription" name="HyundaiSansVnHeadOffice-Regular" family="Hyundai Sans VN Head Office" pointSize="17"/>
+                                        <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVt-nq-bX5">
+                                        <rect key="frame" x="117" y="88" width="156" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="dfd-5p-VTb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HyundaiSansVnHeadOffice-Bold" family="Hyundai Sans VN Head Office" pointSize="17"/>
+                                        <state key="normal" title="Đóng"/>
+                                        <connections>
+                                            <action selector="onDismiss:" destination="mkV-mm-kn0" eventType="touchUpInside" id="WnB-vg-fpq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="fVt-nq-bX5" firstAttribute="top" secondItem="2Y0-OY-PgS" secondAttribute="bottom" constant="12" id="1g9-7B-i9U"/>
+                                    <constraint firstItem="fVt-nq-bX5" firstAttribute="centerX" secondItem="1kA-jZ-cQK" secondAttribute="centerX" id="4LK-L9-pan"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="AxS-ZW-f5p"/>
+                                    <constraint firstItem="fVt-nq-bX5" firstAttribute="width" secondItem="1kA-jZ-cQK" secondAttribute="width" multiplier="2/5" id="CpK-c8-Ww7"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Y0-OY-PgS" secondAttribute="trailing" constant="16" id="PDn-hC-qNI"/>
+                                    <constraint firstItem="2Y0-OY-PgS" firstAttribute="top" secondItem="1kA-jZ-cQK" secondAttribute="top" constant="8" id="aWf-G1-cGG"/>
+                                    <constraint firstItem="2Y0-OY-PgS" firstAttribute="leading" secondItem="1kA-jZ-cQK" secondAttribute="leading" constant="16" id="ojD-jy-HNB"/>
+                                    <constraint firstAttribute="bottom" secondItem="fVt-nq-bX5" secondAttribute="bottom" constant="16" id="yj4-FG-xwK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VQ6-oD-xzb"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VQ6-oD-xzb" firstAttribute="trailing" secondItem="1kA-jZ-cQK" secondAttribute="trailing" constant="12" id="EeJ-Mf-DmQ"/>
+                            <constraint firstItem="1kA-jZ-cQK" firstAttribute="centerY" secondItem="iUB-wV-NAi" secondAttribute="centerY" id="KfY-Hl-hYh"/>
+                            <constraint firstItem="1kA-jZ-cQK" firstAttribute="leading" secondItem="VQ6-oD-xzb" secondAttribute="leading" constant="12" id="jBj-GX-GJd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertView" destination="1kA-jZ-cQK" id="qdK-ML-8fd"/>
+                        <outlet property="messageLabel" destination="2Y0-OY-PgS" id="L8S-4f-yhV"/>
+                        <outlet property="okButton" destination="fVt-nq-bX5" id="iAW-d5-eno"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJj-Is-He9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125" y="139.43661971830986"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

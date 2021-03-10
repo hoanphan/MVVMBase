@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  BaseMVVM
+
+  Created by HoanPV on 10/03/2021.
+  
+*/
+//Common
+"common.close" = "Close";
+
+
+//Network
+"some-thing-wrong" = "Đã xảy ra sự cố. Vui lòng thử lại sau.";
+"network-error" = "Không có kết nối mạng.";
+"parse-error" = "Lỗi dữ liệu trả về";
+"token-expire" = "Phiên truy cập của Quý khách đã hết hạn. Vui lòng đăng nhập lại.";
+"request-time-out" = "Thời gian xử lý quá chậm. Vui lòng thử lại sau.";
+
+
+//Login
+"login.email-not-empty" = "Email not empty";
+"login.email-not-correct-format" = "Email not correct format";
+"login.password-not-empty" = "Password not empty";
+"login.email" = "Email";
+"login.password" = "Password";
+"login.login"   = "Login";
