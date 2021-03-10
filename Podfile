@@ -30,4 +30,7 @@ target 'BaseMVVM' do
   pod 'EmptyDataSet-Swift'
   
   pod 'IQKeyboardManagerSwift', '=6.4.0'
+
+ #Debug
+ pod 'FLEX', '4.1.1', :configurations => ['Debug']
 end

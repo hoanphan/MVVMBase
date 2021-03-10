@@ -7,8 +7,21 @@
 
 import UIKit
 import IQKeyboardManagerSwift
-let appDelegate = UIApplication.shared.delegate as! AppDelegate
+#if DEBUG // Work on DEBUG mode ONLY
+import FLEX
 
+/// Enable debug tool FLEX by shaking the device
+extension UIWindow {
+    open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake { // If the motion event is Shaking device
+            // show tool explore
+            FLEXManager.shared.showExplorer()
+        }
+    }
+}
+#endif
+
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
