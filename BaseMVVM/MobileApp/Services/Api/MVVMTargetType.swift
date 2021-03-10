@@ -15,7 +15,7 @@ extension MVVMTargetType {
     var baseURL: URL {
         return URL(string: Constants.baseUrl)!
     }
-    
+
     var sampleData: Data {
         return Data()
     }

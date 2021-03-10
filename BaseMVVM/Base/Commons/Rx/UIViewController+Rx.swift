@@ -12,7 +12,7 @@ extension Reactive where Base: UIViewController {
     private func controlEvent(for selector: Selector) -> ControlEvent<Void> {
         return ControlEvent(events: sentMessage(selector).map { _ in })
     }
-    
+
     /// Observable, triggered when the view has appeared for the first time
     public var firstTimeViewWillAppear: Single<Void> {
         return sentMessage(#selector(Base.viewWillAppear)).map { _ in
@@ -23,7 +23,7 @@ extension Reactive where Base: UIViewController {
     public var viewWillAppear: ControlEvent<Void> {
         return controlEvent(for: #selector(UIViewController.viewWillAppear))
     }
-    
+
     /// Observable, triggered when the view has appeared for the first time
     public var firstTimeViewDidAppear: Single<Void> {
         return sentMessage(#selector(Base.viewDidAppear)).map { _ in
@@ -34,19 +34,19 @@ extension Reactive where Base: UIViewController {
     public var viewDidAppear: ControlEvent<Void> {
         return controlEvent(for: #selector(UIViewController.viewDidAppear))
     }
-    
+
     public var viewWillDisappear: ControlEvent<Void> {
         return controlEvent(for: #selector(UIViewController.viewWillDisappear))
     }
-    
+
     public var viewDidDisappear: ControlEvent<Void> {
         return controlEvent(for: #selector(UIViewController.viewDidDisappear))
     }
-    
+
     public var viewDidLoad: ControlEvent<Void> {
         return controlEvent(for: #selector(UIViewController.viewDidLoad))
     }
-    
+
     public var didReceiveMemoryWarning: ControlEvent<Void> {
         return controlEvent(for: #selector(UIViewController.didReceiveMemoryWarning))
     }

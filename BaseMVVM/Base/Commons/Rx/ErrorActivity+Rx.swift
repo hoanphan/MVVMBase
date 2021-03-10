@@ -10,13 +10,13 @@ import RxCocoa
 import RxSwift
 
 extension Reactive where Base: BaseViewController {
-    
+
     /// Bindable sink for `startAnimating()`, `stopAnimating()` methods.
     public var showError: Binder<Error> {
         return Binder(self.base) { viewController, error in
             viewController.executeError(error:error)
-            
+
         }
     }
-    
+
 }

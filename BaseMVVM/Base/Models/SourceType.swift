@@ -7,5 +7,5 @@
 
 import Foundation
 public protocol SourceType {
-    
+
 }

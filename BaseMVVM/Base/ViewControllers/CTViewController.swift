@@ -6,6 +6,6 @@
 //
 import Foundation
 
-public protocol CTViewController : class{
+public protocol CTViewController : class {
     func bindData(_ sink:SinkType)
 }

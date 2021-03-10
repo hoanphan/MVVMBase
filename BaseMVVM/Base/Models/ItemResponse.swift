@@ -10,12 +10,12 @@ import ObjectMapper
 
 public struct ItemResponse<T:ImmutableMappable>  : BaseModel {
     public var identifier: String = ""
-    
+
     public let code: Int?
     public let message: String?
     public let data: T?
     public let success:Bool?
-    
+
     public init(code: Int,
                 message: String,
                 success: Bool,
@@ -25,12 +25,11 @@ public struct ItemResponse<T:ImmutableMappable>  : BaseModel {
         self.message = message
         self.success = success
     }
-    
-    
+
     public func getCode() -> String {
         return "\(self.code ?? 0)"
     }
-    
+
     public func getMessage() -> String {
         return self.message ?? ""
     }

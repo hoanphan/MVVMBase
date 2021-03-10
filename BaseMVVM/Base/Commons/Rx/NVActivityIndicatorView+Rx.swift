@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 extension Reactive where Base: NVActivityIndicatorView {
-    
+
     /// Bindable sink for `startAnimating()`, `stopAnimating()` methods.
     public var isAnimating: Binder<Bool> {
         return Binder(self.base) { activityIndicator, active in
@@ -22,5 +22,5 @@ extension Reactive where Base: NVActivityIndicatorView {
             }
         }
     }
-    
+
 }

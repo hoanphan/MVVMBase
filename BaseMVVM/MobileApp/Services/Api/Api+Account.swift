@@ -13,7 +13,7 @@ enum AccountTargetType {
 }
 
 extension AccountTargetType: MVVMTargetType {
-    
+
     var path: String {
         switch self {
         case .signIn:
@@ -22,7 +22,7 @@ extension AccountTargetType: MVVMTargetType {
             return ""
         }
     }
-    
+
     var method: Moya.Method {
         switch self {
         case .signIn:
@@ -31,15 +31,15 @@ extension AccountTargetType: MVVMTargetType {
             return .get
         }
     }
-    
+
     var headers: [String : String]? {
         return nil
     }
-    
+
     var parameters: [String : Any]? {
         switch self {
         case .signIn(let username, let password):
-            var paramester: [String: Any]?{
+            var paramester: [String: Any]? {
                 var parameter:[String:Any] = [:]
                 parameter["email"] = username
                 parameter["password"] = password
@@ -50,7 +50,7 @@ extension AccountTargetType: MVVMTargetType {
             return nil
         }
     }
-    
+
     var parameterEncoding: ParameterEncoding {
         switch self {
         case .signIn:

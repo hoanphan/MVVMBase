@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		675DB82EB3DEDC3378299543 /* Pods_BaseMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010093A3489B4F34C05C8F48 /* Pods_BaseMVVM.framework */; };
 		83C51D9825F864EE00FAB948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C51D9725F864EE00FAB948 /* AppDelegate.swift */; };
-		83C51D9A25F864EE00FAB948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C51D9925F864EE00FAB948 /* SceneDelegate.swift */; };
 		83C51D9C25F864EE00FAB948 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C51D9B25F864EE00FAB948 /* ViewController.swift */; };
 		83C51D9F25F864EE00FAB948 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C51D9D25F864EE00FAB948 /* Main.storyboard */; };
 		83C51DA125F864F000FAB948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C51DA025F864F000FAB948 /* Assets.xcassets */; };
@@ -51,16 +50,19 @@
 		83C51F3825F8B11700FAB948 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C51F3725F8B11700FAB948 /* LoginViewModel.swift */; };
 		83C51F3C25F8B1D900FAB948 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C51F3B25F8B1D900FAB948 /* Login.swift */; };
 		83C51F4125F8B94C00FAB948 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C51F4025F8B94C00FAB948 /* LoginController.swift */; };
-		83C51F4825F8BE6D00FAB948 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C51F4725F8BE6D00FAB948 /* R.generated.swift */; };
 		83C51F4C25F8C26A00FAB948 /* CommonAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C51F4B25F8C26A00FAB948 /* CommonAlertView.swift */; };
+		B24B1FF025F923440087CEC1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B1FEF25F923440087CEC1 /* R.generated.swift */; };
+		B24B1FF225F936490087CEC1 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B1FF125F936490087CEC1 /* PrimaryButton.swift */; };
+		B24D8EE125F9055C0030CC8D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D8EE025F9055C0030CC8D /* Utils.swift */; };
+		B24D8EE325F906A70030CC8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D8EE225F906A60030CC8D /* SceneDelegate.swift */; };
+		B2B7ECB425F8F746008C79AD /* CommonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7ECB325F8F746008C79AD /* CommonTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		010093A3489B4F34C05C8F48 /* Pods_BaseMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA00433DBEC28D8881B85E5 /* Pods-BaseMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseMVVM.debug.xcconfig"; path = "Target Support Files/Pods-BaseMVVM/Pods-BaseMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		83C51D9425F864EE00FAB948 /* BaseMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		83C51D9725F864EE00FAB948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		83C51D9925F864EE00FAB948 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		83C51D9725F864EE00FAB948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Services/AppDelegate.swift; sourceTree = "<group>"; };
 		83C51D9B25F864EE00FAB948 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		83C51D9E25F864EE00FAB948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83C51DA025F864F000FAB948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,8 +106,12 @@
 		83C51F3725F8B11700FAB948 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		83C51F3B25F8B1D900FAB948 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		83C51F4025F8B94C00FAB948 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		83C51F4725F8BE6D00FAB948 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		83C51F4B25F8C26A00FAB948 /* CommonAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlertView.swift; sourceTree = "<group>"; };
+		B24B1FEF25F923440087CEC1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		B24B1FF125F936490087CEC1 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		B24D8EE025F9055C0030CC8D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B24D8EE225F906A60030CC8D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B2B7ECB325F8F746008C79AD /* CommonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextField.swift; sourceTree = "<group>"; };
 		E10C883DA048F94EC70BBFE1 /* Pods-BaseMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseMVVM.release.xcconfig"; path = "Target Support Files/Pods-BaseMVVM/Pods-BaseMVVM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,9 +168,6 @@
 				83C51DAD25F8654400FAB948 /* 3rdParty */,
 				83C51DAC25F8650900FAB948 /* Base */,
 				83C51E5725F892D900FAB948 /* MobileApp */,
-				83C51D9925F864EE00FAB948 /* SceneDelegate.swift */,
-				83C51D9725F864EE00FAB948 /* AppDelegate.swift */,
-				83C51D9B25F864EE00FAB948 /* ViewController.swift */,
 				83C51DA025F864F000FAB948 /* Assets.xcassets */,
 				83C51DA225F864F000FAB948 /* LaunchScreen.storyboard */,
 				83C51DA525F864F000FAB948 /* Info.plist */,
@@ -276,6 +279,7 @@
 		83C51E5725F892D900FAB948 /* MobileApp */ = {
 			isa = PBXGroup;
 			children = (
+				B2B7ECB225F8F6CD008C79AD /* Views */,
 				83C51F3E25F8B8E300FAB948 /* ViewControllers */,
 				83C51F3A25F8B19100FAB948 /* Models */,
 				83C51F1325F8AA0800FAB948 /* ViewModels */,
@@ -284,6 +288,8 @@
 				83C51EBF25F8A2F100FAB948 /* Constants */,
 				83C51E6925F898DB00FAB948 /* Services */,
 				83C51E5925F893C900FAB948 /* Resources */,
+				83C51D9725F864EE00FAB948 /* AppDelegate.swift */,
+				B24D8EE225F906A60030CC8D /* SceneDelegate.swift */,
 			);
 			path = MobileApp;
 			sourceTree = "<group>";
@@ -344,7 +350,7 @@
 		83C51EF725F8A60300FAB948 /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				83C51F4725F8BE6D00FAB948 /* R.generated.swift */,
+				B24B1FEF25F923440087CEC1 /* R.generated.swift */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 				83C51F0A25F8A9C000FAB948 /* DateFormatter.swift */,
 				83C51F0D25F8A9CF00FAB948 /* NumberFormatter.swift */,
 				83C51F1025F8A9E900FAB948 /* UserPrefsHelper.swift */,
+				B24D8EE025F9055C0030CC8D /* Utils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -379,6 +386,7 @@
 		83C51F3E25F8B8E300FAB948 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				83C51D9B25F864EE00FAB948 /* ViewController.swift */,
 				83C51F4A25F8C19A00FAB948 /* CommonAlertView */,
 				83C51F3F25F8B94100FAB948 /* Logins */,
 			);
@@ -401,6 +409,15 @@
 			path = CommonAlertView;
 			sourceTree = "<group>";
 		};
+		B2B7ECB225F8F6CD008C79AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2B7ECB325F8F746008C79AD /* CommonTextField.swift */,
+				B24B1FF125F936490087CEC1 /* PrimaryButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -413,7 +430,8 @@
 				83C51D9125F864EE00FAB948 /* Frameworks */,
 				83C51D9225F864EE00FAB948 /* Resources */,
 				86ABF191E7740D8208C2ECFA /* [CP] Embed Pods Frameworks */,
-				83C51F4325F8BCA800FAB948 /* ShellScript */,
+				83C51F4325F8BCA800FAB948 /* R generate */,
+				B2549DEF25F938BC0026889A /* swiftlint */,
 			);
 			buildRules = (
 			);
@@ -495,7 +513,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		83C51F4325F8BCA800FAB948 /* ShellScript */ = {
+		83C51F4325F8BCA800FAB948 /* R generate */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -505,6 +523,7 @@
 			inputPaths = (
 				"$TEMP_DIR/rswift-lastrun",
 			);
+			name = "R generate";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -531,6 +550,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseMVVM/Pods-BaseMVVM-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B2549DEF25F938BC0026889A /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -553,6 +590,7 @@
 				83C51F1125F8A9E900FAB948 /* UserPrefsHelper.swift in Sources */,
 				83C51E6625F894EA00FAB948 /* Strings.swift in Sources */,
 				83C51F3C25F8B1D900FAB948 /* Login.swift in Sources */,
+				B24D8EE125F9055C0030CC8D /* Utils.swift in Sources */,
 				83C51D9825F864EE00FAB948 /* AppDelegate.swift in Sources */,
 				83C51F0825F8A9A300FAB948 /* Validation.swift in Sources */,
 				83C51F4125F8B94C00FAB948 /* LoginController.swift in Sources */,
@@ -566,16 +604,18 @@
 				83C51DF825F86C8C00FAB948 /* BaseViewController.swift in Sources */,
 				83C51E3C25F8819100FAB948 /* NetworkConnectivity.swift in Sources */,
 				83C51E1325F87C8500FAB948 /* UIViewController+Rx.swift in Sources */,
+				B24B1FF225F936490087CEC1 /* PrimaryButton.swift in Sources */,
+				B24B1FF025F923440087CEC1 /* R.generated.swift in Sources */,
+				B24D8EE325F906A70030CC8D /* SceneDelegate.swift in Sources */,
 				83C51F0B25F8A9C000FAB948 /* DateFormatter.swift in Sources */,
 				83C51E2025F87E5000FAB948 /* BaseViewModel.swift in Sources */,
 				83C51F0E25F8A9CF00FAB948 /* NumberFormatter.swift in Sources */,
+				B2B7ECB425F8F746008C79AD /* CommonTextField.swift in Sources */,
 				83C51E3625F880D200FAB948 /* BaseTargetType.swift in Sources */,
 				83C51F3825F8B11700FAB948 /* LoginViewModel.swift in Sources */,
-				83C51F4825F8BE6D00FAB948 /* R.generated.swift in Sources */,
 				83C51EAD25F8A1AD00FAB948 /* MVVMTargetType.swift in Sources */,
 				83C51E3925F8811800FAB948 /* TSAPIManager.swift in Sources */,
 				83C51DFD25F86E8F00FAB948 /* ActivityIndicator.swift in Sources */,
-				83C51D9A25F864EE00FAB948 /* SceneDelegate.swift in Sources */,
 				83C51DB525F867D800FAB948 /* BaseModel.swift in Sources */,
 				83C51DF525F86C6000FAB948 /* CTViewController.swift in Sources */,
 			);
@@ -736,16 +776,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46W25C8KDG;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 2G5SKGVX6J;
 				INFOPLIST_FILE = BaseMVVM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ominext.GP-Patient";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mbcredit.sale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = mbcredit_saleapp_dev_provisioning;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -757,16 +799,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46W25C8KDG;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 2G5SKGVX6J;
 				INFOPLIST_FILE = BaseMVVM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ominext.GP-Patient";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mbcredit.sale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = mbcredit_saleapp_dev_provisioning;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

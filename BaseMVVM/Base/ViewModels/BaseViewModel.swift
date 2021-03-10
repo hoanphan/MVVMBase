@@ -10,13 +10,12 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-open class BaseViewModel{
-    
+open class BaseViewModel {
+
     public let disposeBag = DisposeBag()
     public var service:ServiceProtocol
-    
-    public init(service:ServiceProtocol){
+
+    public init(service:ServiceProtocol) {
         self.service = service
     }
 }
-

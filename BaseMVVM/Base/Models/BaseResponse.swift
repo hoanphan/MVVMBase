@@ -10,21 +10,21 @@ import ObjectMapper
 
 public struct BaseResponse : BaseModel {
     public var identifier: String = ""
-    
+
     public let code: String?
     public let message: String?
-    
+
     public init(code: String,
                 message: String) {
         self.code = code
         self.message = message
-        
+
     }
-    
+
     public func getCode() -> String {
         return code ?? ""
     }
-    
+
     public func getMessage() -> String {
         return message ?? ""
     }

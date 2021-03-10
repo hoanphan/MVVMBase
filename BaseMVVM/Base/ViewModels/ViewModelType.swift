@@ -11,6 +11,6 @@ import Foundation
 public protocol ViewModelType {
     associatedtype Source
     associatedtype Sink
-    
+
     func transform(source: Source) -> Sink
 }

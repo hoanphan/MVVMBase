@@ -9,7 +9,7 @@
 import Foundation
 
 enum L10n {
-    //Network
+    // Network
     case somethingWrong
     case netWorkError
     case paseError
@@ -22,10 +22,10 @@ enum L10n {
 
 extension L10n: CustomStringConvertible {
     var description: String { return self.string }
-    
+
     var string: String {
         switch self {
-        //Network
+        // Network
         case .somethingWrong:
             return L10n.tr("some-thing-wrong")
         case .netWorkError:
@@ -43,7 +43,7 @@ extension L10n: CustomStringConvertible {
             return L10n.tr("test")
         }
     }
-    
+
     static func tr(_ key: String, _ args: CVarArg...) -> String {
         //  TODO: Load current setting language code: en, vi
         let languageCode = "vi"

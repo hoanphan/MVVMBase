@@ -17,14 +17,13 @@ class RefreshHandler: NSObject {
         view.addSubview(refreshControl)
         refreshControl.addTarget(self, action: #selector(refreshControlDidRefresh(_: )), for: .valueChanged)
     }
-    
+
     // MARK: - Action
     @objc func refreshControlDidRefresh(_ control: UIRefreshControl) {
         refresh.onNext(())
     }
-    
+
     func end() {
         refreshControl.endRefreshing()
     }
 }
-

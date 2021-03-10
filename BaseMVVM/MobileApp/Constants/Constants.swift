@@ -10,7 +10,7 @@ import UIKit
 class Constants: NSObject {
     //  Public
     public static let baseUrl = "http://appoverweight.tk/"
-    
+
     //  Account
     public static let accountLogin = "/api_web/account/signin"
 }

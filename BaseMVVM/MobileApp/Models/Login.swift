@@ -13,7 +13,7 @@ public struct LoginModel: BaseModel {
     public let token: String?
     public let expire: String?
     public let email: String?
-    
+
     init(identifier:String, token: String,  expire: String, email: String?) {
         self.identifier = identifier
         self.token = token

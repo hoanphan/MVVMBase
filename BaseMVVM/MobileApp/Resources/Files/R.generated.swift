@@ -123,10 +123,18 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 1 colors.
+  /// This `R.color` struct is generated, and contains static references to 5 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
+    /// Color `activeBorderInput`.
+    static let activeBorderInput = Rswift.ColorResource(bundle: R.hostingBundle, name: "activeBorderInput")
+    /// Color `borderInput`.
+    static let borderInput = Rswift.ColorResource(bundle: R.hostingBundle, name: "borderInput")
+    /// Color `errorBorderInput`.
+    static let errorBorderInput = Rswift.ColorResource(bundle: R.hostingBundle, name: "errorBorderInput")
+    /// Color `priamryButton`.
+    static let priamryButton = Rswift.ColorResource(bundle: R.hostingBundle, name: "priamryButton")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -137,11 +145,121 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "activeBorderInput", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func activeBorderInput(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.activeBorderInput, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "borderInput", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func borderInput(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.borderInput, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "errorBorderInput", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func errorBorderInput(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.errorBorderInput, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "priamryButton", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func priamryButton(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.priamryButton, compatibleWith: traitCollection)
+    }
+    #endif
+
     #if os(watchOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func accentColor(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.accentColor.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "activeBorderInput", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func activeBorderInput(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.activeBorderInput.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "borderInput", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func borderInput(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.borderInput.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "errorBorderInput", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func errorBorderInput(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.errorBorderInput.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "priamryButton", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func priamryButton(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.priamryButton.name)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
+  /// This `R.image` struct is generated, and contains static references to 4 images.
+  struct image {
+    /// Image `account`.
+    static let account = Rswift.ImageResource(bundle: R.hostingBundle, name: "account")
+    /// Image `icon_eye`.
+    static let icon_eye = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_eye")
+    /// Image `icon_invisible_eye`.
+    static let icon_invisible_eye = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_invisible_eye")
+    /// Image `icon_password`.
+    static let icon_password = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_password")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "account", bundle: ..., traitCollection: ...)`
+    static func account(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.account, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_eye", bundle: ..., traitCollection: ...)`
+    static func icon_eye(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_eye, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_invisible_eye", bundle: ..., traitCollection: ...)`
+    static func icon_invisible_eye(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_invisible_eye, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_password", bundle: ..., traitCollection: ...)`
+    static func icon_password(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_password, compatibleWith: traitCollection)
     }
     #endif
 

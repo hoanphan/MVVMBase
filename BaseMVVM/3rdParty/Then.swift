@@ -23,7 +23,7 @@ extension Then where Self: Any {
         try block(&copy)
         return copy
     }
-    
+
     /// Makes it available to execute something with closures.
     ///
     ///     UserDefaults.standard.do {

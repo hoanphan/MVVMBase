@@ -29,8 +29,12 @@ target 'BaseMVVM' do
   # DZNEmptyDataSet implement with Swift.A drop-in UITableView/UICollectionView superclass category for showing empty datasets whenever the view has no content to display. DZNEmptyDataSet with Swift.
   pod 'EmptyDataSet-Swift'
   
+  #Keyboard
   pod 'IQKeyboardManagerSwift', '=6.4.0'
-
+  
+  # Make Auto Layout
+  pod 'SnapKit'
+  
  #Debug
  pod 'FLEX', :git => 'https://github.com/FLEXTool/FLEX', :configurations => ['Debug']
 end
