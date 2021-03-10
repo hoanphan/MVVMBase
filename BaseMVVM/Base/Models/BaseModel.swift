@@ -11,7 +11,7 @@ public protocol BaseModel {
 }
 
 extension BaseModel {
-    public func withIdentifier(_ identifier:String) -> Self {
+    public func withIdentifier(_ identifier: String) -> Self {
         var value = self
         value.identifier = identifier
         return value

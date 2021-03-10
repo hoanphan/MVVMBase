@@ -13,7 +13,7 @@ import RxSwift
 public class TSAPIManager {
     var timeoutIntervalForRequest: TimeInterval = 60
 
-    public static let share:TSAPIManager = TSAPIManager()
+    public static let share: TSAPIManager = TSAPIManager()
 
     public init() {
     }

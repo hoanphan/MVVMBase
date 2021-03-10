@@ -32,15 +32,15 @@ extension AccountTargetType: MVVMTargetType {
         }
     }
 
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return nil
     }
 
-    var parameters: [String : Any]? {
+    var parameters: [String: Any]? {
         switch self {
         case .signIn(let username, let password):
             var paramester: [String: Any]? {
-                var parameter:[String:Any] = [:]
+                var parameter: [String: Any] = [:]
                 parameter["email"] = username
                 parameter["password"] = password
                 return parameter

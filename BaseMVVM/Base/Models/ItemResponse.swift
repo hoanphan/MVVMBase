@@ -8,13 +8,13 @@
 import Foundation
 import ObjectMapper
 
-public struct ItemResponse<T:ImmutableMappable>  : BaseModel {
+public struct ItemResponse<T:ImmutableMappable>: BaseModel {
     public var identifier: String = ""
 
     public let code: Int?
     public let message: String?
     public let data: T?
-    public let success:Bool?
+    public let success: Bool?
 
     public init(code: Int,
                 message: String,

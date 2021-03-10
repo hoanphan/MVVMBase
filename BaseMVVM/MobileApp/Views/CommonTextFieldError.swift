@@ -12,21 +12,21 @@ class CommonTextFieldError: UIView {
     fileprivate var commonTextField = CommonTextField()
     fileprivate var labelError = UILabel()
     fileprivate var stateTextField: CommonTextField.State = .normal
-    
+
     var textField: UITextField {
         return self.commonTextField.textField
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.initView()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.initView()
     }
-    
+
     fileprivate func initView() {
         self.commonTextField.delegate = self
         self.contraitTextField()
@@ -37,7 +37,7 @@ class CommonTextFieldError: UIView {
             $0.text = ""
         }
     }
-    
+
     fileprivate func contraitTextField() {
         self.addSubview(commonTextField)
         switch stateTextField {
@@ -46,14 +46,14 @@ class CommonTextFieldError: UIView {
                 make.trailing.leading.top.bottom.equalTo(0)
                 make.height.equalTo(40)
             }
-        case .error(_):
+        case .error:
             commonTextField.snp.makeConstraints { make in
                 make.trailing.leading.top.equalTo(0)
                 make.height.equalTo(40)
             }
         }
     }
-    
+
     fileprivate func contraintLabelError() {
         self.addSubview(self.labelError)
         self.labelError.snp.makeConstraints { make in
@@ -63,11 +63,11 @@ class CommonTextFieldError: UIView {
             make.bottom.equalTo(-5)
         }
     }
-    
+
     func setStateTextField(state: CommonTextField.State) {
         self.commonTextField.state = state
         self.stateTextField = state
-        
+
         switch state {
         case .active, .normal:
             self.labelError.removeFromSuperview()
@@ -78,7 +78,7 @@ class CommonTextFieldError: UIView {
             self.contraintLabelError()
         }
     }
-    
+
     public func getCommonTextField() -> CommonTextField {
         return commonTextField
     }

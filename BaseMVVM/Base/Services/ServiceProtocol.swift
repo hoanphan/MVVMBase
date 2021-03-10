@@ -10,7 +10,7 @@ import RxSwift
 import ObjectMapper
 
 public protocol ServiceProtocol {
-    func get<API: BaseTargetType>(_ api:API)-> Observable<String>
-    func getItem<T:ImmutableMappable, API:BaseTargetType>(_ type:T.Type, _ api:API) -> Observable<T>
-    func getItems<T:ImmutableMappable, API:BaseTargetType>(_ type:T.Type, _ api:API) -> Observable<[T]>
+    func get<API: BaseTargetType>(_ api: API)-> Observable<String>
+    func getItem<T: ImmutableMappable, API: BaseTargetType>(_ type: T.Type, _ api: API) -> Observable<T>
+    func getItems<T: ImmutableMappable, API: BaseTargetType>(_ type: T.Type, _ api: API) -> Observable<[T]>
 }

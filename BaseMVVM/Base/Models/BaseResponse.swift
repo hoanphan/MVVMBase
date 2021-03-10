@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-public struct BaseResponse : BaseModel {
+public struct BaseResponse: BaseModel {
     public var identifier: String = ""
 
     public let code: String?

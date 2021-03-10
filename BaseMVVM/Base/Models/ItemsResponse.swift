@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 import ObjectMapper
 
-public struct ItemsResponse<T:ImmutableMappable>  : BaseModel {
+public struct ItemsResponse<T:ImmutableMappable>: BaseModel {
     public var identifier: String = ""
 
     public let code: Int?

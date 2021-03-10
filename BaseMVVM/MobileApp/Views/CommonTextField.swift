@@ -15,17 +15,17 @@ protocol CommonTextFieldDelegate {
 @IBDesignable
 class CommonTextField: UIView {
     // MARK: variable
-    fileprivate var isShowPassword:Bool = false
-    public var delegate: CommonTextFieldDelegate?
-    
+    fileprivate var isShowPassword: Bool = false
+    public weak var delegate: CommonTextFieldDelegate?
+
     // MARK: UI controller
-    fileprivate var iconLeft:UIImageView?
-    fileprivate var iconRight:UIImageView?
-    public var textField:UITextField = UITextField()
+    fileprivate var iconLeft: UIImageView?
+    fileprivate var iconRight: UIImageView?
+    public var textField: UITextField = UITextField()
     fileprivate var normalRadiusColor: CGColor = R.color.borderInput()?.cgColor ?? UIColor.white.cgColor
     fileprivate var activeRadiusColor: CGColor = R.color.activeBorderInput()?.cgColor ?? UIColor.blue.cgColor
     fileprivate var errorRadiusColor: CGColor = R.color.errorBorderInput()?.cgColor ?? UIColor.red.cgColor
-    
+
     @IBInspectable
     public var text: String? {
         set {
@@ -68,7 +68,7 @@ class CommonTextField: UIView {
             self.setupBorderTextField()
         }
     }
-    
+
     @IBInspectable
     var icon: UIImage? = UIImage(named: "account") {
         didSet {
@@ -152,7 +152,7 @@ class CommonTextField: UIView {
             make.leading.trailing.bottom.top.equalTo(0)
         }
 
-        button.addTarget(self, action:#selector(self.showOrHidePassword), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.showOrHidePassword), for: .touchUpInside)
 
         return view
     }
@@ -182,7 +182,7 @@ class CommonTextField: UIView {
             makes.leading.equalTo(self.iconLeft!.snp.trailing).offset(10)
             makes.top.equalTo(5)
             makes.bottom.equalTo(-5)
-            if(self.isSecurityField) {
+            if self.isSecurityField {
                 makes.trailing.equalTo(self.iconRight!.snp.leading).offset(-10)
                 return
             }
@@ -190,8 +190,8 @@ class CommonTextField: UIView {
             makes.trailing.equalTo(-10)
         })
     }
-    
-    enum State{
+
+    enum State {
         case normal
         case active
         case error(_ message: String)

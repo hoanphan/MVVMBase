@@ -51,8 +51,7 @@ struct R: Rswift.Validatable {
     // Note: key might not exist in chosen language (in that case, key will be shown)
     for language in languages {
       if let lproj = hostingBundle.url(forResource: language, withExtension: "lproj"),
-         let lbundle = Bundle(url: lproj)
-      {
+         let lbundle = Bundle(url: lproj) {
         let strings = lbundle.url(forResource: tableName, withExtension: "strings")
         let stringsdict = lbundle.url(forResource: tableName, withExtension: "stringsdict")
 
@@ -617,7 +616,7 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
-        if _R.storyboard.main().commonAlertView() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'commonAlertView' could not be loaded from storyboard 'Main' as 'CommonAlertView'.") }
+        if _R.storyboard.main().commonAlertView() == nil { throw Rswift.ValidationError(description: "[R.swift] ViewController with identifier 'commonAlertView' could not be loaded from storyboard 'Main' as 'CommonAlertView'.") }
       }
 
       fileprivate init() {}

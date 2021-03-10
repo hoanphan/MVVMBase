@@ -19,11 +19,11 @@ open class BaseViewController: UIViewController, CTViewController, SegueProtocol
 
     }
 
-    open var state:ViewControllerState = .unknown
+    open var state: ViewControllerState = .unknown
     var disableUserInteractionWhileFetching: Bool = true
-    public var viewModel :BaseViewModel?
-    public var sender:Any?
-    public var nvActivityIndicator:NVActivityIndicatorView?
+    public var viewModel: BaseViewModel?
+    public var sender: Any?
+    public var nvActivityIndicator: NVActivityIndicatorView?
     public let disposeBag = DisposeBag()
 
     public func setSender(_ sender: Any?) {
@@ -42,7 +42,7 @@ open class BaseViewController: UIViewController, CTViewController, SegueProtocol
 
     }
 
-    open func bindData(_ sink:SinkType) {
+    open func bindData(_ sink: SinkType) {
 
         sink.fetching?
             .drive(self.nvActivityIndicator!.rx.isAnimating)
@@ -63,21 +63,21 @@ open class BaseViewController: UIViewController, CTViewController, SegueProtocol
             .disposed(by: disposeBag)
     }
 
-    open func executeError(error:Error) {
+    open func executeError(error: Error) {
         if self.state != .viewDidDisappear {
-            if(error is ServiceError) {
+            if error is ServiceError {
                 let error = error as! ServiceError
                 switch error {
-                case let .error(code,message,_):
+                case let .error(code, message, _):
                     if code != "999" {
                         self.showMessage(message: message) {}
                     } else {
                         self.showMessage(message: L10n.somethingWrong.string) {}
                     }
                 case .netWorkError:
-                    self.showMessage(message:  L10n.netWorkError.string) {}
+                    self.showMessage(message: L10n.netWorkError.string) {}
                 case .parseError:
-                    self.showMessage(message:  L10n.paseError.string) {}
+                    self.showMessage(message: L10n.paseError.string) {}
                 case .encryptError:
                     break
                 case .cancel:
@@ -88,9 +88,9 @@ open class BaseViewController: UIViewController, CTViewController, SegueProtocol
                     }
                 }
             } else {
-                if ((error as NSError).code == NSURLErrorTimedOut
+                if (error as NSError).code == NSURLErrorTimedOut
                     || (error as NSError).code == NSURLErrorCannotFindHost
-                    || (error as NSError).code == NSURLErrorCannotConnectToHost) {
+                    || (error as NSError).code == NSURLErrorCannotConnectToHost {
                     self.showMessage(message: L10n.requestTimeOut.string) {}
                 }
             }
@@ -179,11 +179,11 @@ extension BaseViewController {
 }
 
 public protocol SegueProtocol {
-    func setSender(_ sender:Any?)
+    func setSender(_ sender: Any?)
     func getSender() -> Any?
 }
 
-public enum ViewControllerState : Int , Equatable {
+public enum ViewControllerState: Int, Equatable {
     case unknown = 0
     case viewDidload = 1
     case viewWillAppear = 2

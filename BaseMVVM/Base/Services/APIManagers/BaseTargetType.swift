@@ -18,6 +18,6 @@ extension BaseTargetType {
     }
 
     public var task: Moya.Task {
-        return .requestParameters(parameters: self.parameters! , encoding: parameterEncoding)
+        return .requestParameters(parameters: self.parameters!, encoding: parameterEncoding)
     }
 }

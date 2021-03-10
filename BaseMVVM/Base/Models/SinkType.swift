@@ -14,7 +14,7 @@ public protocol SinkType {
     var error: Driver<Error>? {get set}
 }
 
-public protocol ListSinkType : SinkType {
-    var itemsSource : Driver<[Any]>? {get set}
-    var refresh : Driver<Bool>? {get set}
+public protocol ListSinkType: SinkType {
+    var itemsSource: Driver<[Any]>? {get set}
+    var refresh: Driver<Bool>? {get set}
 }

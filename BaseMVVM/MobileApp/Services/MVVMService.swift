@@ -15,8 +15,8 @@ class MVVMService: Service {
         super.init(timeout: timeout, scheduler: scheduler)
     }
 
-    override func get<API>(_ api: API) -> Observable<String> where API : BaseTargetType {
-        if(!NetworkConnectivity.isConnectedToInternet) {
+    override func get<API>(_ api: API) -> Observable<String> where API: BaseTargetType {
+        if !NetworkConnectivity.isConnectedToInternet {
            return Observable.error(ServiceError.netWorkError)
         }
 
@@ -34,22 +34,22 @@ class MVVMService: Service {
         }
     }
 
-    override func getItem<T, API>(_ type: T.Type, _ api: API) -> Observable<T> where T : ImmutableMappable, API : BaseTargetType {
+    override func getItem<T, API>(_ type: T.Type, _ api: API) -> Observable<T> where T: ImmutableMappable, API: BaseTargetType {
         return self.get(api)
             .observe(on: self.scheduler)
             .flatMap { json -> Observable<ItemResponse<T>> in
-                if(json.isEmpty) {
-                    return Observable.error(ServiceError.error(code: "999",message: "Error", json: json))
+                if json.isEmpty {
+                    return Observable.error(ServiceError.error(code: "999", message: "Error", json: json))
                 }
                 print(json)
 
                 let response = try? Mapper<ItemResponse<T>>().map(JSONString: json)
-                if(response == nil) {
+                if response == nil {
                     return Observable.error(ServiceError.parseError)
                 }
 
-                if(response!.getCode() != "200") {
-                    return Observable.error(ServiceError.error(code: response!.getCode(),message: response!.getMessage() , json: json))
+                if response!.getCode() != "200" {
+                    return Observable.error(ServiceError.error(code: response!.getCode(), message: response!.getMessage(), json: json))
                 }
 
                 return Observable.just(response!)
@@ -58,24 +58,24 @@ class MVVMService: Service {
             .map {$0.data!}
     }
 
-    override func getItems<T, API>(_ type: T.Type, _ api: API) -> Observable<[T]> where T : ImmutableMappable, API : BaseTargetType {
+    override func getItems<T, API>(_ type: T.Type, _ api: API) -> Observable<[T]> where T: ImmutableMappable, API: BaseTargetType {
         return self.get(api)
             .observe(on: self.scheduler)
             .flatMap { json -> Observable<ItemsResponse<T>> in
 
-                if(json.isEmpty) {
-                    return Observable.error(ServiceError.error(code: "999",message: "Error", json: json))
+                if json.isEmpty {
+                    return Observable.error(ServiceError.error(code: "999", message: "Error", json: json))
                 }
 
                 print("response: \(json)")
 
                 let response = try? Mapper<ItemsResponse<T>>().map(JSONString: json)
-                if(response == nil) {
+                if response == nil {
                     return Observable.error(ServiceError.parseError)
                 }
 
-                if(response!.getCode() != "200") {
-                    return Observable.error(ServiceError.error(code: response!.getCode(),message : response!.getMessage(),json: json))
+                if response!.getCode() != "200" {
+                    return Observable.error(ServiceError.error(code: response!.getCode(), message: response!.getMessage(), json: json))
                 }
 
                 return Observable.just(response!)

@@ -23,7 +23,7 @@ public class LoginViewModel: BaseViewModel {
                 }
 
                 if !isValidEmail(email) {
-                    return Driver.just((false,  L10n.tr("login.email-not-correct-format")))
+                    return Driver.just((false, L10n.tr("login.email-not-correct-format")))
                 }
 
                 return Driver.just((true, ""))
@@ -68,12 +68,12 @@ public class LoginViewModel: BaseViewModel {
 
 extension LoginViewModel: ViewModelType {
     public struct Source: SourceType {
-        public let viewWillAppear : Driver<Void>
+        public let viewWillAppear: Driver<Void>
         public let loginAction: Driver<Void>
         public let email: Driver<String>
         public let password: Driver<String>
 
-        public init(viewWillAppear:Driver<Void>,
+        public init(viewWillAppear: Driver<Void>,
                     loginAction: Driver<Void>,
                     email: Driver<String>,
                     password: Driver<String>) {

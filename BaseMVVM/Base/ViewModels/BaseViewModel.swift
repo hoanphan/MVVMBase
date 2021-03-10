@@ -13,9 +13,9 @@ import RxCocoa
 open class BaseViewModel {
 
     public let disposeBag = DisposeBag()
-    public var service:ServiceProtocol
+    public var service: ServiceProtocol
 
-    public init(service:ServiceProtocol) {
+    public init(service: ServiceProtocol) {
         self.service = service
     }
 }
