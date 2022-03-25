@@ -16,7 +16,7 @@ protocol CommonTextFieldDelegate {
 class CommonTextField: UIView {
     // MARK: variable
     fileprivate var isShowPassword: Bool = false
-    public weak var delegate: CommonTextFieldDelegate?
+    public var delegate: CommonTextFieldDelegate?
 
     // MARK: UI controller
     fileprivate var iconLeft: UIImageView?

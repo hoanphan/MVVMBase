@@ -36,5 +36,5 @@ target 'BaseMVVM' do
   pod 'SnapKit'
   
  #Debug
- pod 'FLEX', :git => 'https://github.com/FLEXTool/FLEX', :configurations => ['Debug']
+ #pod 'FLEX', :git => 'https://github.com/FLEXTool/FLEX', :configurations => ['Debug']
 end

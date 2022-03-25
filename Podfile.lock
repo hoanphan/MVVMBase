@@ -2,7 +2,6 @@ PODS:
   - Alamofire (4.9.1)
   - Differentiator (5.0.0)
   - EmptyDataSet-Swift (5.0.0)
-  - FLEX (4.4.0)
   - IQKeyboardManagerSwift (6.4.0)
   - Kingfisher (4.10.1)
   - Moya (13.0.1):
@@ -33,7 +32,6 @@ PODS:
 
 DEPENDENCIES:
   - EmptyDataSet-Swift
-  - FLEX (from `https://github.com/FLEXTool/FLEX`)
   - IQKeyboardManagerSwift (= 6.4.0)
   - Kingfisher
   - Moya
@@ -66,20 +64,10 @@ SPEC REPOS:
     - SnapKit
     - SwiftLint
 
-EXTERNAL SOURCES:
-  FLEX:
-    :git: https://github.com/FLEXTool/FLEX
-
-CHECKOUT OPTIONS:
-  FLEX:
-    :commit: 558d65a0b0ca8ab900c5e807cf52868360ead284
-    :git: https://github.com/FLEXTool/FLEX
-
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
-  FLEX: 0592c011c6dfbfdb94a5e24f2d4a9dbff0c6026d
   IQKeyboardManagerSwift: ed9b04ee0e3067ffba543283462d619f944b05e5
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
@@ -95,6 +83,6 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftLint: 0c645fdc6feed3e390c1701ab3cc669f88b42752
 
-PODFILE CHECKSUM: ae4db460a36166a6f2b4318e1b7dee634f6a7ee1
+PODFILE CHECKSUM: 2a0930c375a4157567b1ceb08d05c8810a75c086
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.11.2

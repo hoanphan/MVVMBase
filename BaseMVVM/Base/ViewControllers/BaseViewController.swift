@@ -92,6 +92,8 @@ open class BaseViewController: UIViewController, CTViewController, SegueProtocol
                     || (error as NSError).code == NSURLErrorCannotFindHost
                     || (error as NSError).code == NSURLErrorCannotConnectToHost {
                     self.showMessage(message: L10n.requestTimeOut.string) {}
+                } else {
+                    self.showMessage(message: L10n.somethingWrong.string) {}
                 }
             }
         }
